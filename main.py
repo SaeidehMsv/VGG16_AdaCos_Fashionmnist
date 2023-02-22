@@ -4,11 +4,10 @@ import tensorflow as tf
 # printing one sample of tf dataset
 # sample = list(train_dataset.batch(10).take(1).as_numpy_iterator())[0][0]
 # print(np.shape(sample))
-
-
+# make data ready for training
 train_dataset, test_dataset = maketfdataset()
 
-
+#
 model = create_model()
 model.summary()
 model.compile(optimizer=tf.keras.optimizers.RMSprop(),
