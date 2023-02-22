@@ -105,7 +105,6 @@ class AdaCos(Layer):
                 tf.math.log(b_avg) /
                 tf.math.cos(tf.minimum(math.pi / 4, theta_med)))
 
-            # Return scaled logits
             return self._s * logits
 
 
