@@ -6,7 +6,8 @@ import numpy as np
 def parse_input(x, y):
     return (x, y), y
 
-
+# getting dataset ready for training
+# convert to tensorflow dataset
 def maketfdataset():
     train_data = pd.read_csv("fashion-mnist_train.csv")
     y_train = train_data['label']
