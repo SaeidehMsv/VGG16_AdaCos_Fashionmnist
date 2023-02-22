@@ -8,14 +8,14 @@ def parse_input(x, y):
 
 
 def maketfdataset():
-    train_data = pd.read_csv("/home/saeideh/PycharmProjects/fashionmnist/VGG/archive/fashion-mnist_train.csv")
+    train_data = pd.read_csv("fashion-mnist_train.csv")
     y_train = train_data['label']
     x_train = train_data.drop(columns='label')
     x_train = x_train / 255.0
     x_train = np.array(x_train)
     x_train = np.reshape(x_train, (-1, 28, 28))
     print(np.shape(x_train))
-    test_data = pd.read_csv("/home/saeideh/PycharmProjects/fashionmnist/archive/VGG/fashion-mnist_test.csv")
+    test_data = pd.read_csv("fashion-mnist_test.csv")
     y_test = test_data['label']
     x_test = test_data.drop(columns='label')
     x_test = x_test / 255.0
